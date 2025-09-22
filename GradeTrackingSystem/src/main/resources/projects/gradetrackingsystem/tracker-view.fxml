@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox prefHeight="431.0" prefWidth="652.0" spacing="10" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projects.gradetrackingsystem.TrackerController">
+    <padding>
+        <Insets bottom="10" left="10" right="10" top="10" />
+    </padding>
+
+    <!-- Title -->
+<Label style="-fx-font-size: 24px; -fx-font-weight: bold;" text="Grade Tracker" />
+
+<!-- Table for displaying students -->
+<TableView fx:id="studentTable" prefHeight="300">
+    <columns>
+        <TableColumn fx:id="nameColumn" prefWidth="200" text="Student Name" />
+         <TableColumn fx:id="courseColumn" prefWidth="200" text="Course" />
+        <TableColumn fx:id="gradeColumn" prefWidth="100" text="Grade" />
+         <TableColumn fx:id="creditColumn" prefWidth="100" text="Credit" />
+    </columns>
+</TableView>
+
+<!-- Input fields -->
+<HBox alignment="CENTER" spacing="10">
+    <TextField fx:id="nameField" promptText="Student Name" />
+      <TextField fx:id="courseField" promptText="Course" />
+    <TextField fx:id="gradeField" promptText="Grade" />
+      <TextField fx:id="creditField" layoutX="416.0" layoutY="10.0" promptText="Grade" />
+</HBox>
+
+<!-- Action buttons -->
+<HBox alignment="CENTER" spacing="10">
+    <Button fx:id="addButton" text="Add" />
+    <Button fx:id="updateButton" text="Update" />
+    <Button fx:id="deleteButton" text="Delete" />
+    <Button fx:id="clearButton" text="Clear" />
+</HBox>
+</VBox>
